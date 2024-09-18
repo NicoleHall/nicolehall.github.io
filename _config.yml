@@ -8,16 +8,15 @@ plugins:
 
 #-------------------------------
 # General Site Settings
-title: Johnny Hopkins
-description: "Hi I'm Johnny, and I'm a Data Scientist.  My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
-baseurl: "" # the subpath of your site, e.g. /blog
+title: Nicole
+description: "I'm Nicole. I am a software developer, SDET, and Solution Engineer. I am taking my career to the next level as a data scientist to drive data-driven innovations that will shape the future." baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
 subtitle: Data Science <span style="color:#f58506"> Portfolio </span>
-location: "London, UK"
-resume_url: /docs/resume.docx
+location: "Denver, CO"
+resume_url: /docs/Nicole Hall Solutions Engineer.pdf
 avatar_image: /img/profile_picture.JPG
 
 #-------------------------------
