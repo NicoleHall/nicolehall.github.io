@@ -1,43 +1,37 @@
 ---
 layout: post
 title: Finding Prime Numbers with Python
-image: "/posts/primes_image.jpeg"
+image: "/posts/primes_image.png"
 tags: [Python, Primes]
 ---
 
-In this post I'm going to run through a function in Python that can quickly find all the Prime numbers below a given value.  For example, if I passed the function a value of 100, it would find all the prime numbers below 100!
+In this post I'm going to run through a function in Python that can quickly find all the Prime numbers below a given value.  For example, if I passed the function a value of 100, it would find all the prime numbers below 100.
 
-If you're not sure what a Prime number is, it is a number that can only be divided wholly by itself and one so 7 is a prime number as no other numbers apart from 7 or 1 divide cleanly into it 8 is not a prime number as while eight and one divide into it, so do 2 and 4
-
-Let's get into it!
+A Prime Number is a number that can only be divided wholly by itself and one. 7 is a prime number because no other numbers apart from 7 or 1 divide cleanly into it. A prime number has exactly two divisors; 1 and itself. 
 
 ---
 
-First let's start by setting up a variable that will act as the upper limit of numbers we want to search through. We'll start with 20, so we're essentially wanting to find all prime numbers that exist that are equal to or smaller than 20
+I start by setting up a variable that will act as the upper limit of the range of numbers. If n is set to 20, the program will find all prime numbers that are equal to or smaller than 20
 
 ```ruby
 n = 20
 ```
 
-The smallest true Prime number is 2, so we want to start by creating a list of numbers than need checking so every integer between 2 and what we set above as the upper bound which in this case was 20. We use n+1 as the range logic is not inclusive of the upper limit we set there
+The smallest true Prime number is 2, therefore the program will check a every integer between 2 and n to determine if it is prime. The second argument in Python's range method is the upper limit. Python's range logic is not inclusive of the upper. To include the upper limit, n should be increased by 1. This will instruct the program to create a range that is 2 through 21. 20 is included. 21 is excluded.
 
-Instead of using a list, we're going to use a set.  The reason for this is that sets have some special functions that will allow us to eliminate non-primes during our search.  You'll see what I mean soon...
+Python has choices for data structures; List, Set, Tuple and Dictionary. The best option for this program is to use a set. I will use set's .difference() method to compare two sets in a later step
 
 ```ruby
 number_range = set(range(2, n+1))
 ```
 
-Let's also create a place where we can store any primes we discover.  A list will be perfect for this job
+A list data structure can be used to hold the prime numbers as they are discovered as the program loops through each integer between 2 and 20.
 
 ```ruby
 primes_list = []
 ```
 
-We're going to end up using a while loop to iterate through our list and check for primes, but before we construct that I always it valuable to code up the logic and iterate manually first.  This means I can check that it is working correctly before I set it off to run through everything on it's own
-
-So, we have our set of numbers (called number_range to check all integers between 2 and 20. Let's extract the first number from that set that we want to check as to whether it's a prime. When we check the value we're going to check if it is a prime...if it is, we're going to add it to our list called primes_list...if it isn't a prime we don't want to keep it
-
-There is a method which will remove an element from a list or set and provide that value to us, and that method is called *pop*
+Before implementing the looping logic, it is valuable to consider the needed logic that should execute in each iteration of the loop. Set's .pop() method will remove the first number from the number_range set. The first number from the number_range set to check is 2. If it is prime, it will be added to the list called primes_list. If it is not a prime, it will remain in the number_range set and be [garbage collected](https://stackify.com/python-garbage-collection/) by Python.
 
 ```ruby
 print(number_range)
