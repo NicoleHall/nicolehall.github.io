@@ -9,7 +9,8 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Nicole
-description: "I'm Nicole. I am a software developer, SDET, and Solution Engineer. I am taking my career to the next level as a data scientist to drive data-driven innovations that will shape the future." baseurl: "" # the subpath of your site, e.g. /blog
+description: "I'm Nicole. I am a software developer, SDET, and Solution Engineer. I am taking my career to the next level as a data scientist to drive data-driven innovations that will shape the future."
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
@@ -21,8 +22,8 @@ avatar_image: /img/yellow sweater square.png
 
 #-------------------------------
 # Contact links
-linkedln: "https://linkedln.com/nicolealexandrahall" # Add your linkedln handle
-github: "https://github.com/NicoleHall"  # Add your github handle
+linkedin: "https://linkedin.com/nicolealexandrahall" # Add your LinkedIn handle
+github: "https://github.com/NicoleHall"  # Add your GitHub handle
 
 paginate: 6
 paginate_path: "/page/:num"
@@ -39,7 +40,6 @@ defaults:
       read_time: true
       share: false
 
-
 #-------------------------------
 # Exclude from processing.
 # exclude:
@@ -50,4 +50,3 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
