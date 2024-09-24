@@ -5,19 +5,19 @@ image: "/posts/coach_prime_numbers.jpg"
 tags: [Python, Primes]
 ---
 
-In this post I'm going to run through a function in Python that can quickly find all the Prime numbers below a given value.  For example, if I passed the function a value of 100, it would find all the prime numbers below 100.
+I am learning Python. This post is about a function that will find prime numbers between 0 and n. If the 100 was passed to the function, it would find all the prime numbers below 100.
 
 A Prime Number is a number that can only be divided wholly by itself and one. 7 is a prime number because no other numbers apart from 7 or 1 divide cleanly into it. A prime number has exactly two divisors; 1 and itself. 
 
 ---
 
-I start by setting up a variable that will act as the upper limit of the range of numbers. If n is set to 20, the program will find all prime numbers that are equal to or smaller than 20
+The first step is to create a variable that will act as the upper limit of the range of numbers. If n is set to 20, the program will find all prime numbers that are equal to or smaller than 20
 
 ```ruby
 n = 20
 ```
 
-The smallest true Prime number is 2, therefore the program will check a every integer between 2 and n to determine if it is prime. The second argument in Python's range method is the upper limit. Python's range logic is not inclusive of the upper. To include the upper limit, n should be increased by 1. This will instruct the program to create a range that is 2 through 21. 20 is included. 21 is excluded.
+The smallest true Prime number is 2, therefore the program will check every integer between 2 and n to determine if it is prime. Python has a .range() method. The first argument is the beginning of the range and the second argument is the upper limit. Python's range logic is not inclusive of the upper. To include the upper limit, n should be increased by 1. This will instruct the program to create a range that is 2 through 21. 20 is included. 21 is excluded.
 
 Python has choices for data structures; List, Set, Tuple and Dictionary. The best option for this program is to use a set. I will use set's .difference() method to compare two sets in a later step
 
@@ -31,13 +31,13 @@ A list data structure can be used to hold the prime numbers as they are discover
 primes_list = []
 ```
 
-Before implementing the looping logic, it is valuable to consider the needed logic that should execute in each iteration of the loop. Set's .pop() method will remove the first number from the number_range set. The first number from the number_range set to check is 2. If it is prime, it will be added to the list called primes_list. If it is not a prime, it will remain in the number_range set and be [garbage collected](https://stackify.com/python-garbage-collection/) by Python.
+Before implementing the looping logic, it is valuable to consider the needed logic that should execute in each iteration of the loop. Set has a .pop() method. This method will remove the first number from the number_range set. The first number from the number_range set is 2. This will be the first number in the range that will be either identified as prime or not prime. If it is prime, it will be added to the list called primes_list. If it is not a prime, it will remain in the number_range set and be [garbage collected](https://stackify.com/python-garbage-collection/) by Python.
 
 ```ruby
 print(number_range)
 >>> {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 ```
-If we use pop, and assign this to the object called **prime** it will *pop* the first element from the set out of **number_range**, and into **prime**
+If we use pop, and assign this to the object called **prime** it will remove, or pop, the first element from the set called **number_range**, and place it into the variable called **prime**
 
 ```ruby
 prime = number_range.pop()
@@ -47,7 +47,7 @@ print(number_range)
 >>> {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 ```
 
-Now, we know that the very first value in our range is going to be a prime...as there is nothing smaller than it so therefore nothing else could possible divide evenly into it.  As we know it's a prime, let's add it to our list of primes...
+The first value in the range, which is 2, is already known to be a prime number. This is becuase there is no smaller number that 2 could divide evenly into it. Given that it is confirmed to be a prime, it is added to the list of primes.
 
 ```ruby
 primes_list.append(prime)
@@ -55,17 +55,17 @@ print(primes_list)
 >>> [2]
 ```
 
-Now we're going to do a special trick to check our remaining number_range for non-primes. For the prime number we just checked (in this first case it was the number 2) we want to generate all the multiples of that up to our upper range (in our case, 20).
+A clever implementation will now be used to check the remaining number range for non-primes. For the prime number just checked (in this first case, the number 2), all its multiples will be generated up to the upper range (in this example, 20). 
 
-We're going to again use a set rather than a list, because it allows us some special functionality that we'll use soon, which is the magic of this approach.
+Once again, a set will be used again instead of a list. A set is needed to hold the range of multiples because the set data type has a function to compare to sets. It will be implemented in a later step. 
 
 ```ruby
 multiples = set(range(prime*2, n+1, prime))
 ```
 
-Remember that when created a range the syntax is range(start, stop, step). For the starting point - we don't need our number as that has already been added as a prime, so let's start our range of multiples at 2 * our number as that is the first multiple, in our case, our number is 2 so the first multiple will be 4. If the number we were checking was 3 then the first multiple would be 6 - and so on.
+It's important to remember that the syntax for creating a range is `range(start, stop, step)`. For the starting point, there's no need to include the original number, as it has already been identified as a prime. Instead, the range of multiples should begin at 2 times the given number, which represents the first multiple. For example, if the number is 2, the first multiple will be 4. If the number being checked is 3, the first multiple would be 6 and so on.
 
-For the stopping point of our range - we specify that we want our range to go up to 20, so we use n+1 to specify that we want 20 to be included.
+The range should stop at 20, but it needs to include 20. n+1 is used so that 20 will be included. The default functionality of .range() is to exclude the number provided in the `stop` argument.
 
 Now, the **step** is key here.  We want multiples of our number, so we want to increment in steps *of our* number so we can put in **prime** here
 
