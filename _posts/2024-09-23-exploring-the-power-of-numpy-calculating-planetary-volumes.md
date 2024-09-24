@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exploring the Power of NumPy: Calculating Planetary Volumes
-image: "img/posts/planet_and_whale.jpeg"
+image: "/posts/planet_and_whale.jpeg"
 tags: [Python, NumPy]
 ---
 
