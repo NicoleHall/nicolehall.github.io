@@ -57,7 +57,7 @@ print(primes_list)
 
 A clever implementation will now be used to check the remaining number range for non-primes. For the prime number just checked (in this first case, the number 2), all its multiples will be generated up to the upper range (in this example, 20). 
 
-Once again, a set will be used again instead of a list. A set is needed to hold the range of multiples because the set data type has a function to compare to sets. It will be implemented in a later step. 
+Once again, a set data structure will be used instead of a list data structure to hold the range of multiples. In Python, a set has function to compare two sets, which will be implemented in a later step. 
 
 ```ruby
 multiples = set(range(prime*2, n+1, prime))
@@ -67,18 +67,18 @@ It's important to remember that the syntax for creating a range is `range(start,
 
 The range should stop at 20, but it needs to include 20. n+1 is used so that 20 will be included. The default functionality of .range() is to exclude the number provided in the `stop` argument.
 
-Now, the **step** is key here.  We want multiples of our number, so we want to increment in steps *of our* number so we can put in **prime** here
+To generate multiples of the given number, the range should increment in steps equal to that number, allowing it to capture each multiple effectively. Therefore, the step value should be set to the prime number itself.
 
-Lets have a look at our list of multiples...
+The set of multiples looks like this:
 
 ```ruby
 print(multiples)
 >>> {4, 6, 8, 10, 12, 14, 16, 18, 20}
 ```
 
-The next part is the magic I spoke about earlier, we're using the special set functionality **difference_update** which removes any values from our number range that are multiples of the number we just checked. The reason we're doing this is because if a number is a multiple of anything other than 1 or itself then it is **not a prime number** and can remove it from the list to be checked.
+The comparison function available to objects of the set type that was mentioned earlier is called **difference_update**. This function removes any values from the number range that are multiples of the number we just checked. The reason for doing this is because if a number is a multiple of anything other than 1 or itself then it is **not a prime number** and can be removed from the `number_range` set.
 
-Before we apply the **difference_update**, let's look at our two sets.
+Here are the two sets. If a number appears in the `mulitples` set, it should be removed from the `number_range` set.
 
 ```ruby
 print(number_range)
@@ -88,18 +88,20 @@ print(multiples)
 >>> {4, 6, 8, 10, 12, 14, 16, 18, 20}
 ```
 
-**difference_update** works in a way that will update one set to only include the values that are *different* from those in a second set
-
-To use this, we put our initial set and then apply the difference update with our multiples
+**difference_update** function will modify the `number_range` set to exclude a value that also appears in the `multiples` set.
 
 ```ruby
 number_range.difference_update(multiples)
 print(number_range)
 >>> {3, 5, 7, 9, 11, 13, 15, 17, 19}
 ```
+The `number_range` set now excludes values that were present in the `multiples` set. The values in the `multiples` set are necessarily not prime numbers because they have   three divisors: 1, themselves and the number that divides them evenly.
 
-When we look at our number range now, all values that were also present in the multiples set have been removed as we *know* they were not primes
-
+When examining the modified `number_range`, all values that were also present in the multiples set have been removed, because the necessarily are not prime.
+```ruby
+number_range >>> {3, 5, 7, 9, 11, 13, 15, 17, 19}
+```
+ 
 This is amazing!  We've made a massive reduction to the pool of numbers that need to be tested so this is really efficient. It also means the smallest number in our range *is a prime number* as we know nothing smaller than it divides into it...and this means we can run all that logic again from the top!
 
 Whenever you can run sometime over and over again, a while loop is often a good solution.
