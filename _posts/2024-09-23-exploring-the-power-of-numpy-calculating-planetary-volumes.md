@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Exploring the Power of NumPy: Calculating Planetary Volumes
+title: "Exploring the Power of NumPy: Calculating Planetary Volumes"
 image: "/posts/planet_and_whale.jpeg"
 tags: [Python, NumPy]
 ---
 
 ### **Exploring the Power of NumPy: Calculating Planetary Volumes**
 
-**Purpose:** This blog post is to explain the value of using the NumPy library in working with large datasets and complex calculations.
+**Purpose:** This blog post aims to explain the value of using the NumPy library when working with large datasets and complex calculations.
 
 ### **Why Use NumPy?**
 
@@ -15,10 +15,10 @@ The NumPy library is a fundamental tool for scientific computing in Python. It o
 
 1. **Differences Between `np.array` and Python Lists:**
 
-   - **Performance:** NumPy is built on an optimized C backend, allowing operations to be performed at a much faster rate than with Python lists.
+   - **Performance:** NumPy is built on an optimized C backend, allowing operations to be performed much faster than with Python lists.
    - **Memory Efficiency:** NumPy stores elements in contiguous memory blocks, requiring less overhead. This structure results in more efficient memory usage compared to Python lists, which can store elements scattered across memory.
-   - **Homogeneity:** All elements in a NumPy array must be of the same data type. This homogeneity is a significant factor contributing to NumPy's speed, as it allows for efficient computation without needing to check data types repeatedly.
-   - **Advanced Mathematical Operations:** NumPy supports element-wise addition, multiplication, matrix operations, and broadcasting, which makes it incredibly powerful for mathematical computations.
+   - **Homogeneity:** All elements in a NumPy array must be of the same data type. This homogeneity significantly contributes to NumPy's speed, as it allows for efficient computation without needing to check data types repeatedly.
+   - **Advanced Mathematical Operations:** NumPy supports element-wise addition, multiplication, matrix operations, and broadcasting, making it incredibly powerful for mathematical computations.
 
 2. **Key Features of NumPy:**
 
@@ -28,7 +28,7 @@ The NumPy library is a fundamental tool for scientific computing in Python. It o
 
 ### **Why Calculate Planetary Volumes?**
 
-Calculating the volumes of planets is a neat exercise for practicing with NumPy. It demonstrates how efficiently the library handles mathematical operations on datasets of various sizes. This exercise offers insights into the speed and performance that NumPy brings to data processing tasks, even as we scale up the data.
+Calculating the volumes of planets is a neat exercise for practicing with NumPy. It demonstrates how efficiently the library handles mathematical operations on datasets of various sizes. This exercise offers insights into the speed and performance that NumPy brings to data processing tasks, even as data scales up.
 
 ### **Step-by-Step: Using NumPy to Calculate the Volume of the 8 Planets**
 
@@ -76,7 +76,7 @@ Running this code instantly returns an array containing the volumes of all 8 pla
 
 ### **Scaling Up: Calculating Volumes for 1 Million Fictional Planets**
 
-One of the most impressive aspects of NumPy is its ability to handle large datasets with ease. As a demonstaration, it can calculate the volumes for 1 million fictional planets with randomly generated radii.
+One of the most impressive aspects of NumPy is its ability to handle large datasets with ease. As a demonstration, it can calculate the volumes for 1 million fictional planets with randomly generated radii.
 
 #### **Step 1: Create an Array of 1 Million Random Radii**
 
