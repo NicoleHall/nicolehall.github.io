@@ -1,17 +1,15 @@
 ---
 layout: post
 title: "Exploring the Power of NumPy: Calculating Planetary Volumes"
-image: "/posts/planet_and_whale.jpeg"
+image: "/posts/planet_and_whale.jpg"
 tags: [Python, NumPy]
 ---
 
 ### **Exploring the Power of NumPy: Calculating Planetary Volumes**
 
-**Purpose:** This blog post aims to explain the value of using the NumPy library when working with large datasets and complex calculations.
+**Purpose:** I am learning Python and NumPy. This blog post explains the value of using the NumPy library when working with large datasets and complex calculations.
 
-### **Why Use NumPy?**
-
-The NumPy library is a fundamental tool for scientific computing in Python. It offers significant advantages over native Python data structures, such as lists, and is widely used for its speed and efficiency. Here's why:
+The NumPy library is a fundamental tool for scientific computing in Python. It offers significant advantages over Python's nativelist data structures, such as lists, and is widely used for its speed and efficiency. Here's why:
 
 1. **Differences Between `np.array` and Python Lists:**
 
