@@ -5,8 +5,6 @@ image: "/posts/i_grind.jpg"
 tags: [Python, Leetcode]
 ---
 
-### Key Learnings from Leetcode's Roman to Integer Challenge
-
 Everyone says "Grind Leetcode". Ok, fine 👩‍🎓
 
 ### Romans to Integer
