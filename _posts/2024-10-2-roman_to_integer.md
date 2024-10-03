@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Key Learnings About Python from Leetcode's Roman to Integer Challenge
-image: "/posts/Solar-System-Project-For-Kids.jpg"
+image: "/posts/i_grind.jpg"
 tags: [Python, Leetcode]
 ---
 
