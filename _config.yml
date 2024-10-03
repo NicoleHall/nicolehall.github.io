@@ -8,7 +8,7 @@ plugins:
 
 #-------------------------------
 # General Site Settings
-title: Nicole
+title: Nicole Hall
 description: "I'm Nicole. I am a software developer, SDET, and Solution Engineer. I am taking my career to the next level as a data scientist to drive data-driven innovations that will shape the future."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
