@@ -9,7 +9,7 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Nicole Hall
-description: ""
+description: "Somebody once told me"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -51,5 +51,6 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 
