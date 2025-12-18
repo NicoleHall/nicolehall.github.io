@@ -9,13 +9,13 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Nicole Hall
-description: "the world is gonna roll me"
+description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
-subtitle: <span style="color:#f58506"> Somebody once told me </span>
+subtitle: <span style="color:#f58506"> Somebody once told me <br> The world was gonna roll me </span>
 location: "Denver, CO"
 resume_url: 
 avatar_image: /img/yellow sweater square.png
@@ -51,6 +51,7 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 
 
